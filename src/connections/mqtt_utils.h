@@ -8,6 +8,7 @@ public:
     boolean isConnected();
     static void mqttCallBack(char *topic, uint8_t *payload, unsigned int length);
     static String convertByteToString(uint8_t* payload, unsigned int length);
+    void loop();
 };
 
 #endif

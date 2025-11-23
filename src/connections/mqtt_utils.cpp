@@ -40,6 +40,10 @@ void MqttUtils::mqttSubscribe(){
   mqttClient.subscribe(mqtt_topic);
 }
 
+void MqttUtils::loop(){
+  mqttClient.loop();
+}
+
 // This function runs when a message is received
 void MqttUtils::mqttCallBack(char *topic, uint8_t *payload, unsigned int length) {
   Serial.print("Message arrived on topic: ");
