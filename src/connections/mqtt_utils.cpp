@@ -40,6 +40,10 @@ void MqttUtils::mqttSubscribe(){
   mqttClient.subscribe(mqtt_topic);
 }
 
+/**
+ * Main loop to maintain MQTT connection
+ * like pinging the broker and processing incoming messages
+ */
 void MqttUtils::loop(){
   mqttClient.loop();
 }
